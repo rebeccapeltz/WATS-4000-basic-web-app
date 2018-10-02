@@ -1,6 +1,10 @@
 <template>
   <div class="hello">
     <h1>{{ msg }}</h1>
+    <div id="example-1">
+      <button v-on:click="counter += 1">Add 1</button>
+      <p>The button above has been clicked {{ counter }} times.</p>
+    </div>
     <h2>Essential Links</h2>
     <ul>
       <li>
@@ -88,6 +92,7 @@ export default {
   name: 'HelloWorld',
   data () {
     return {
+      counter: 0,
       msg: 'Welcome to Your Vue.js App'
     }
   }
@@ -108,6 +113,9 @@ li {
   margin: 0 10px;
 }
 a {
-  color: #42b983;
+  color: white;
+}
+.hello {
+  background-color: red;
 }
 </style>
